@@ -1,0 +1,32 @@
+.navigation-bar {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  margin-right: 10px;
+  
+}
+
+a{
+  color: white;
+  margin-right: 10px;
+}
+
+
+
+.navigation-bar-image {
+  width: 200px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+  display: inline-block;
+}
