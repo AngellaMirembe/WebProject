@@ -1,7 +1,10 @@
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: url("school.jpg") center/cover no-repeat;
+    background-image: url(../images/nyakasura_welcome_image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fit;
     position: relative;
 }
 
