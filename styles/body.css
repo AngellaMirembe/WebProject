@@ -38,6 +38,16 @@
     font-size: 20px;
 }
 
+.about-hero {
+    background-image: url("../images/aerial_view.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    opacity: 0.8;
+    
+    text-align: center;
+}
+
 /* Button */
 .btn {
     background-color: #B22222;
