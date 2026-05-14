@@ -4,7 +4,7 @@
     background-image: url(../images/nyakasura_welcome_image.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fit;
+    background-position: center;
     position: relative;
 }
 
@@ -40,12 +40,23 @@
 
 .about-hero {
     background-image: url("../images/aerial_view.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
     height: 200px;
-    opacity: 0.8;
-    
     text-align: center;
+    color: white;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
 }
 
 /* Button */
@@ -113,4 +124,64 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+#mdd {
+    position: relative;
+    background-image: url("../images/mdd.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#mdd::before, #sports::before, #debate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+#mdd > * , #sports > * , #debate > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#sports {
+    position: relative;
+    background-image: url("../images/sports.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#debate {
+    position: relative;
+    background-image: url("../images/debate.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+h2 {
+    color: #B22222;
+}
+
+.separator {
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    margin: 0 10px;
 }
