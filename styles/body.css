@@ -256,3 +256,10 @@ h2 {
     text-align: center;
     padding: 50px 0;
 }
+
+#contact-cards {
+    justify-content: center;
+    background-color: #964646;
+    color: white;
+    font-weight: bold;
+}
