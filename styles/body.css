@@ -38,8 +38,9 @@
     font-size: 20px;
 }
 
+/* about page */
 .about-hero {
-    background-image: url("../images/badge1.png");
+    background-image: url("../images/aerial_view.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
