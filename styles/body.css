@@ -1,67 +1,6 @@
-/* Hero Section */
-.hero {
-    height: 90vh;
-    background-image: url(../images/nyakasura_welcome_image.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-/* Overlay */
-.hero::after, .about-hero::after, .contact-hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-}
-
-/* Hero Content */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* about page */
-.about-hero {
-    background-image: url("../images/aerial_view.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 200px;
-    text-align: center;
-    color: white;
-}
-
-
-
-.about {
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 15%;
-    bottom: 15%;
-    z-index: 1;
-}
-
-
+/* ========================================
+   GLOBAL & SHARED STYLES
+   ======================================== */
 
 /* Button */
 .btn {
@@ -89,6 +28,95 @@ section {
 
 .light {
     background-color: #F5F5F5;
+}
+
+h2 {
+    color: #B22222;
+}
+
+.separator {
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    margin: 0 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #B22222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ========================================
+   HOMEPAGE STYLES
+   ======================================== */
+
+/* Hero Section Carousel */
+.hero-carousel {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.hero-slide.prev {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero-slide h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-slide p {
+    font-size: 20px;
 }
 
 /* Cards */
@@ -123,15 +151,7 @@ section {
     border-radius: 5px;
 }
 
-/* Footer */
-footer {
-    background-color: #B22222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-
+/* Clubs & Activities with Background Images */
 #mdd {
     position: relative;
     background-image: url("../images/mdd.jpg");
@@ -156,8 +176,6 @@ footer {
     z-index: 1;
 }
 
-
-
 #sports {
     position: relative;
     background-image: url("../images/sports.jpg");
@@ -180,53 +198,46 @@ footer {
     overflow: hidden;
 }
 
-h2 {
-    color: #B22222;
+
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
+
+.about-hero {
+    background-image: url("../images/aerial_view.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 200px;
+    text-align: center;
+    color: white;
 }
 
-.separator {
-    display: block;
-    width: 2px;
-    height: 100%;
-    background-color: white;
-    margin: 0 10px;
+.about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
 }
 
-.icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-   
+.about {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+    bottom: 15%;
+    z-index: 1;
 }
 
-.x-icon, .facebook-icon, .instagram-icon {
-     border-width: 5px;
-    border-color: #B22222;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: white;
-}
 
-.icons img {
-    width: 10px;
-    height: auto;
-    margin: 0 auto;
-}
+/* ========================================
+   CONTACT PAGE STYLES
+   ======================================== */
 
-.icons a {
-    text-decoration: none;
-   color: black;
-    font-size: smaller;
-}
-
-.icons a:hover {
-    color: #8B1A1A;
-}
-
-/* contact page */
 .contact-hero {
     position: relative;
     background-image: url("../images/contact-image.jpg");
@@ -240,6 +251,12 @@ h2 {
 }
 
 .contact-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -263,4 +280,42 @@ h2 {
     background-color: #964646;
     color: white;
     font-weight: bold;
+}
+
+
+/* ========================================
+   SOCIAL ICONS & LINKS
+   ======================================== */
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.x-icon, .facebook-icon, .instagram-icon {
+    border-width: 5px;
+    border-color: #B22222;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.icons img {
+    width: 10px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.icons a {
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
+}
+
+.icons a:hover {
+    color: #8B1A1A;
 }

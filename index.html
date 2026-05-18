@@ -43,11 +43,50 @@
 </div>
 
 <!-- Hero Section -->
-<div class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Nyakasura School</h1>
-        <p>Shaping Future Leaders Through Excellence</p>
-        <a href="#" class="btn">Learn More</a>
+<div class="hero-carousel">
+    <div class="hero-slide active" style="background-image: url(images/hero1.jpg);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Nyakasura School</h1>
+            <p>Shaping Future Leaders Through Excellence</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+    
+    <div class="hero-slide" style="background-image: url(images/hero2.jpg);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Academic Excellence</h1>
+            <p>Empowering Minds, Building Futures</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+    
+    <div class="hero-slide" style="background-image: url(images/hero3.jpg);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Holistic Development</h1>
+            <p>Excellence in Learning and Character</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+    
+    <div class="hero-slide" style="background-image: url(images/hero4.jpg);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Join Our Community</h1>
+            <p>Where Potential Becomes Achievement</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+    
+    <div class="hero-slide" style="background-image: url(images/hero5.jpg);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Transform Your Future</h1>
+            <p>Your Journey to Success Starts Here</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
     </div>
 </div>
 
@@ -119,6 +158,44 @@
     <p>Nyakasura School – Fort Portal</p>
     <p>Email: info@nyakasura.com | Phone: +256 775 459 649 / +256 771 872 466</p>
 </footer>
+
+<script>
+    // Hero carousel autoplay
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        // Remove active and prev from all slides
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if (i !== index) {
+                slide.style.zIndex = '1';
+            }
+        });
+        
+        // Set the previous slide (the one being replaced)
+        const previousSlide = slides[(index - 1 + totalSlides) % totalSlides];
+        previousSlide.classList.add('prev');
+        previousSlide.style.zIndex = '1';
+        
+        // Set the new active slide
+        slides[index].classList.add('active');
+        slides[index].style.zIndex = '2';
+    }
+
+    // Initialize first slide
+    slides[0].classList.add('active');
+    slides[0].style.zIndex = '2';
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Change slide every 5 seconds
+    setInterval(nextSlide, 5000);
+</script>
 
 </body>
 </html>
