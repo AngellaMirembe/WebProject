@@ -1,0 +1,178 @@
+
+
+.about-hero {
+    background-image: url("../images/aerial_view.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+}
+
+.about-hero::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 1;
+}
+
+.about {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+    bottom: 15%;
+    z-index: 1;
+}
+
+.administration {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #B22222;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.administration img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.administration .headteacher-message {
+    max-width: 400px;
+    text-align: justify;
+}
+
+.headteacher-message h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #B22222;
+}
+
+
+
+#boys-uniform{
+    position: relative;
+
+    background-image: url("../images/boys_uniform.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+#girls-uniform{
+    position: relative;
+
+    background-image: url("../images/gallery3.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+#identity{
+    position: relative;
+
+    background-image: url("../images/hero4.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+
+
+
+#boys-uniform::before, #girls-uniform::before, #identity::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    transition: 0.4s ease;
+
+    z-index: 1;
+}
+
+#boys-uniform h3,
+#boys-uniform h3,
+#boys-uniform p,
+#girls-uniform h3,
+#girls-uniform p,
+#identity h3,
+#identity p {
+    position: relative;
+
+    z-index: 2;
+    color: white;
+}

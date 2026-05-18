@@ -1,0 +1,138 @@
+/* Hero Section Carousel */
+.hero-carousel {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.hero-slide.prev {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero-slide h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-slide p {
+    font-size: 20px;
+}
+
+/* Clubs & Activities with Background Images */
+#mdd {
+    position: relative;
+    background-image: url("../images/mdd.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#mdd p {
+    color: white;
+}
+
+#mdd::before, #sports::before, #debate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+#mdd > * , #sports > * , #debate > * {
+    position: relative;
+    z-index: 1;
+}
+
+#sports {
+    position: relative;
+    background-image: url("../images/sports.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#sports p {
+    color: white;
+}
+
+#debate {
+    position: relative;
+    background-image: url("../images/debate.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#debate p {
+    color: white;
+}
+
+/* student life */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
