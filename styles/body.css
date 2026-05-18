@@ -2,6 +2,10 @@
    GLOBAL & SHARED STYLES
    ======================================== */
 
+   .page-content {
+    margin-top: 150px; /* Adjust this value based on the height of your header */
+   }
+
 /* Button */
 .btn {
     background-color: #B22222;
