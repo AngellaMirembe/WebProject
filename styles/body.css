@@ -129,6 +129,7 @@ footer {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    
 }
 
 .card {
@@ -141,6 +142,7 @@ footer {
     padding: 25px;
     border-radius: 15px;
     transition: 0.3s ease;
+    
 }
 
 .card h3{
@@ -287,10 +289,38 @@ footer {
     z-index: 1;
 }
 
-#boys-uniform,
-#girls-uniform, {
-    
+.administration {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #B22222;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
 }
+
+.administration img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.administration .headteacher-message {
+    max-width: 400px;
+    text-align: justify;
+}
+
+.headteacher-message h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #B22222;
+}
+
+
 
 #boys-uniform{
     position: relative;
@@ -442,6 +472,129 @@ footer {
     color: white;
 }
 
+/* ACADEMICS PAGE */
+.academic-hero {
+    position: relative;
+    background-image: url("../images/Nyakasura_nav_badge.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+    height: 200px;
+}
+
+.academic-hero::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 1;
+}
+
+#library {
+    position: relative;
+
+    background-image: url("../images/library.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+#science-lab {
+    position: relative;
+
+    background-image: url("../images/sciencelab2.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+#computer-lab {
+    position: relative;
+
+    background-image: url("../images/ict-lab.jpg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+#science-lab::before, #library::before, #computer-lab::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    transition: 0.4s ease;
+
+    z-index: 1;
+}
+
+#science-lab h3,
+#science-lab p,
+#library h3,
+#library p,
+#computer-lab h3,
+#computer-lab p {
+    position: relative;
+
+    z-index: 2;
+    color: white;
+}
+
+
 
 /* ========================================
    SOCIAL ICONS & LINKS
@@ -511,4 +664,13 @@ footer {
 #topBtn:hover{
     background-color: #8B1A1A;
     transform: translateY(-3px);
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
